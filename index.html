@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glow Shop - Mini E-commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">GLOW<span>SHOP</span></div>
+
+    <div class="header-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-text">Dark</span>
+      </button>
+
+      <button class="cart-button">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PROIZVODI -->
+    <section class="products-section">
+      <h1 class="section-title">Featured Products</h1>
+      <p class="section-subtitle">
+        Mini web shop – all front-end, fully coded in JavaScript.
+      </p>
+
+      <!-- SEARCH + FILTERI -->
+      <div class="toolbar">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search products..."
+        />
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="serum">Serums</button>
+          <button class="filter-btn" data-category="cream">Creams</button>
+          <button class="filter-btn" data-category="mask">Masks</button>
+          <button class="filter-btn" data-category="cleanser">Cleansers</button>
+        </div>
+      </div>
+
+      <div id="product-list" class="product-list">
+        <!-- JS ubacuje kartice -->
+      </div>
+    </section>
+
+    <!-- KORPA + CHECKOUT -->
+    <aside class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items" class="cart-items">
+        <p class="cart-empty">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-summary">
+        <div class="cart-row">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">0.00 KM</span>
+        </div>
+        <div class="cart-row">
+          <span>Shipping:</span>
+          <span id="cart-shipping">5.00 KM</span>
+        </div>
+        <div class="cart-row cart-total-row">
+          <span>Total:</span>
+          <span id="cart-total">5.00 KM</span>
+        </div>
+      </div>
+
+      <h3>Checkout</h3>
+      <form id="checkout-form" class="checkout-form">
+        <input type="text" placeholder="Full name" required />
+        <input type="text" placeholder="Address" required />
+        <input type="tel" placeholder="Phone number" required />
+        <button type="submit" class="btn-primary">Place Order</button>
+      </form>
+
+      <p id="checkout-message" class="checkout-message"></p>
+    </aside>
+  </main>
+  <section class="cta-portfolio">
+  <h2>Need a mini shop like this?</h2>
+  <p>
+    I design and code custom landing pages and mini e-commerce experiences
+    in vanilla JavaScript, HTML and CSS.
+  </p>
+<a 
+  href="mailto:tvojmail@gmail.com?subject=Mini%20Shop%20Inquiry&body=Hi%20Majda,%0D%0A%0D%0AI saw your mini e-commerce shop and I’m interested in creating something similar for my product or brand.%0D%0A%0D%0AHere are a few details about my project:%0D%0A- Product/brand name:%0D%0A- Type of page (landing page / mini shop / portfolio / booking):%0D%0A- Number of products (if any):%0D%0A- Style I want (minimalist / luxury / colorful / cyber / clean):%0D%0A- Deadline:%0D%0A%0D%0AThank you!%0D%0A"
+  class="btn-primary cta-btn"
+>
+  Let's build your version
+</a>
+</section>
+<footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-brand">© 2025 Majda – Frontend Developer</p>
+      <p class="footer-links">
+        <span>Email: <a href="kapetanovicmajda10@gmail.com">kapetanovicmajda10@gmail.com</a></span>
+        <span>Instagram: <a href="https://www.instagram.com/codedvibrations?igsh=MXJnYm8wdjRzd2dvMA==" target="_blank">codedvibrations</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- POPUP / TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
